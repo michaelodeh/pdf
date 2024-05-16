@@ -77,7 +77,7 @@ const powerReceipt = async (
     const logoWidth = 150;
     const logoHeight = 80;
     const fontSize = 12;
-    const fontPath = path.join("build", "fonts", "Rubik", "static");
+    const fontPath = path.join("public", "fonts", "Rubik", "static");
 
     const Font = {
       Regular: "Regular",
@@ -93,7 +93,7 @@ const powerReceipt = async (
 
     doc
       .image(
-        "build/imgs/logo.png",
+        "public/imgs/logo.png",
         (pageWidth - logoWidth) / 2,
         pageMarginTop - 50,
         {
@@ -137,7 +137,7 @@ const powerReceipt = async (
       doc
         .text(item.name, pageMarginLeft, y - 30, {})
         .font(
-          path.join("build", "fonts", "Inter", "static", "Inter-Regular.ttf")
+          path.join("public", "fonts", "Inter", "static", "Inter-Regular.ttf")
         )
         .moveTo(0, y);
       let alignValue = 250;
@@ -159,7 +159,7 @@ const powerReceipt = async (
     doc.moveDown(1.5);
     let x = doc.x;
     let y = doc.y;
-    doc.image("build/imgs/logo2.png", pageMarginLeft, y, {
+    doc.image("public/imgs/logo2.png", pageMarginLeft, y, {
       link: "https://telah.ng",
     });
     doc.fontSize(10).text(footerText, pageMarginLeft, y + 100, {
